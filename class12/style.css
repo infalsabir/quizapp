@@ -8,8 +8,6 @@ body{
 .box-1{
     background-color: rgb(152, 152, 187);
     color: rgb(10, 9, 9);
-    font-size: var(--box-font-size);
-    padding: var(--box-padding);
     border: 1px solid black;
     width: 40%;
 
