@@ -10,25 +10,30 @@ body{
     color: rgb(10, 9, 9);
     border: 1px solid black;
     width: 40%;
-
+    padding: 10px;
+    border-radius: 20px;
 }
 .box-2{
     background-color: cadetblue;
     color: black;
-    padding: 1%;
-    border: 1px solid black;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
     width: 40%;
+    border-color: rgb(4, 61, 61) deeppink rgb(4, 41, 41) deeppink;
 }
 .box-3{
-    background-color: rgb(187, 184, 141);
+    
     color: rgb(8, 8, 8);
     padding: 1%;
     border: 1px solid black;
     width: 40%;
+    background-image:url(./background.webp);
+    border-style:dotted;
     
 }
 .box-4{
-    background-color: rgb(212, 114, 160);
+    background-color: rgb(172, 170, 175);
     color: rgb(8, 8, 8);
     padding: 1%;
     border: 1px solid black;
