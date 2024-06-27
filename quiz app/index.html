@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h2 id="question">Question Test</h2>
+            <div id="timer">10 </div>
+            <!--timer-->
+            <div id="progress">Question <span id="currentQuestions">1</span>
+                <span id="totalQuestions">/ 4</span>
+            </div>
+            <ul>
+                <li><input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text">Answer A</label>
+                </li>
+                <li><input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text">Answer B</label>
+                </li>
+                <li><input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text">Answer C</label>
+                </li>
+                <li><input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d_text">Answer D</label>
+                </li>
+
+            </ul>
+        </div>
+        <div id="score">Score : 0 </div>
+        <button id="submit">Submit</button>
+    </div>
+    <script>
+        const quizData = [
+            {
+                question: 'Javascript mein variable declare karny ka sahi tareeqa kya hai?',
+                a: 'var x = 10;',
+                b: 'variable x = 10;',
+                c: 'x = 10;',
+                d: 'int x = 10;',
+                correct: 'a',
+            },
+            {
+                question: 'Code ka output kya hoga?                 console.log(2 + "2");',
+                a: '4',
+                b: '22',
+                c: '"22"',
+                d: '"4"',
+                correct: 'c',
+            },
+            {
+                question: 'Javascript mein variable array hai  ya nahi kaise check karty hain?',
+                a: 'isArray(x)',
+                b: 'x.isArray()',
+                c: 'x instanceof Array',
+                d: 'typeof Array',
+                correct: 'c',
+            },
+            {
+                question: 'Javascript mein single line par comment kaise likhty hain?',
+                a: '# This is a comment.',
+                b: '// This is a comment',
+                c: '/* This is a comment.*/',
+                d: '<!-- This is a comment.-->',
+                correct: 'b'
+            },
+            {
+                question: ' HTML document mein Javascript code kahan insert kart hain? ',
+                a: 'Dono <head> aur <body> mein',
+                b: '<head> section mein',
+                c: '<body> section mein',
+                d: 'HTML file mein kahin bhi',
+                correct: 'a'
+            },
+            {
+                question: 'Javascript mein kis tarah ke loops available hote hain?',
+                a: 'for loop,do...while loop,while loop',
+                b: 'for loop, do...until loop,while loop',
+                c: 'for loop,do...while loop, until loop',
+                d: 'for loop, do...while loop, repeat...until loop',
+                correct: 'a'
+            },
+            {
+                question: 'Kaunsa loop code block ko kam se kam ek baar execute karny ki gurantee deta hai?',
+                a: 'for loop',
+                b: 'do...while loop',
+                c: 'while loop',
+                d: 'none',
+                correct: 'b'
+            },
+            {
+                question: 'Javascript mein array par iterate karny ke liye kaunsa loop ideal hai?',
+                a: 'for loop',
+                b: 'do...while loop',
+                c: 'while loop',
+                d: 'repeat...until loop',
+                correct: 'a'
+            },
+            {
+                question: 'Javascript mein NaN kya hai?',
+                a: 'Not a Number',
+                b: 'Negative and Null',
+                c: 'No Argumment Needed',
+                d:'New Array Name',
+                correct: 'a'
+
+            },
+            {
+                question: 'Javascript mein typeof operator kis tarah ka data return karta hai? ',
+                a: 'String',
+                b: 'Number',
+                c: 'Object',
+                d: 'Undefined',
+                correct: 'b'
+            }
+        ];
+
+        const quiz = document.getElementById('quiz');
+        const answerEls = document.querySelectorAll('.answer');
+        const questionEl = document.getElementById('question');
+        const timerEl = document.getElementById('timer');
+        const a_text = document.getElementById('a_text');
+        const b_text = document.getElementById('b_text');
+        const c_text = document.getElementById('c_text');
+        const d_text = document.getElementById('d_text');
+        const submitBtn = document.getElementById('submit');
+        const scoreEl = document.getElementById('score');
+        const currentQuestionsEl = document.getElementById('currentQuestions');
+        const totalQuestionsEl = document.getElementById('totalQuestions');
+        let currentQuiz = 0;
+        let score = 0;
+        let timer;
+
+        totalQuestionsEl.innerText = quizData.length;
+        loadQuiz()
+        function loadQuiz() {
+            deselectAnswers();
+
+            const currentQuizData = quizData[currentQuiz];
+
+            questionEl.innerText = currentQuizData.question;
+            a_text.innerText = currentQuizData.a;
+            b_text.innerText = currentQuizData.b;
+            c_text.innerText = currentQuizData.c;
+            d_text.innerText = currentQuizData.d;
+            currentQuestionsEl.innerText = currentQuiz + 1;
+            scoreEl.innerText = `Score : ${score}`;
+
+            startTimer();
+        }
+        function startTimer() {
+            let timeLeft = 15;
+            timerEl.innerText = timeLeft;
+            clearInterval(timer);
+            timer = setInterval(() => {
+                timeLeft--;
+                timerEl.innerText = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    nextQuestion();
+                }
+            }, 1000)
+        }
+
+        function deselectAnswers() {
+            answerEls.forEach(answerEl => answerEl.checked = false);
+        }
+        function selected() {
+            let answer;
+            answerEls.forEach(answerEl => {
+                if (answerEl.checked) {
+                    answer = answerEl.id;
+                }
+            });
+            return answer;
+        }
+        function nextQuestion() {
+            const answer = selected();
+            if (answer && answer === quizData[currentQuiz].correct) {
+                score++;
+            }
+            currentQuiz++;
+            if (currentQuiz < quizData.length) {
+                loadQuiz();
+            } else {
+                let feedback;
+                const percentage = (score / quizData.length) * 100;
+                if (percentage >= 80) {
+                    feedback = 'You are a genius';
+                } else if (percentage >= 50) {
+                    feedback = 'You are good';
+                } else {
+                    feedback = 'Better Luck Next Time';
+                }
+
+                quiz.innerHTML = `<h2> You answered ${score}/ ${quizData.length} questions correctly </h2> 
+                <h3> ${feedback}</h3>
+                 <button onclick = 'location.reload()'>Reload</button>
+                    `
+            }
+        }
+        submitBtn.addEventListener('click', () => {
+            clearInterval(timer);
+            nextQuestion();
+
+        });
+        loadQuiz();
+    </script>
+</body>
+
+</html>
