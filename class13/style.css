@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'FontName', sans-serif;
+}
+h1{
+   margin: 10px; 
+   line-height: 80px;
+}
+nav{
+    background-color: whitesmoke;
+    height: 80px;
+    width: 1360px;
+
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 100px;
+    margin: 10px;
+
+}
+nav ul li a{
+    color: darkgray;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background-color: yellow;
+  padding-top: 48px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+h5{
+    text-align: center;
+    padding-top: 100px;
+}
+.heading{
+    text-align: center;
+    color: red;
+    width: 450px;
+    margin: auto;
+    padding: 10px;
+}
+.home-image{
+    background-image: url("./wood-sideboard-living-room-interior-with-copy-space\ \(1\).jpg");
+    background-repeat: no-repeat;
+width: 1370px;
+    height: 700px;
+    background-size: cover;
+}
+.input-box{
+    width: 300px;
+    border-radius: 800;
+    padding: 25px;
+    box-shadow: 0 2px 4px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    display: inline;
+    background-color: white;
+    margin-left:500px;
+}
+h4{
+    margin-left: 200px;
+    margin-top: 100px;
+}
+.story{ text-align: left;
+    margin-left: 200px;
+}
+.h2{
+    margin-left: 200px;
+    margin-bottom: 5px;
+}
+.para{
+    margin-left: 200px;
+}
+.image{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: 600px; 
+    display:inline-block;
+    margin-bottom: 250px;
+
+   
+}
+.image-2{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin-left: 500;
+    margin-bottom: 150px;
+    margin-top: auto;
+
+}
+
+.text-container-2{
+  margin-left: 300px;
+  padding:20px;
+  background-color: antiquewhite;
+  width: 350px;
+  height: 200px;
+  margin-bottom: 300px;
+  text-align: center;
+}
+.sofa-image{
+    background-image:url("./empty-living-room-with-blue-sofa-plants-table-empty-white-wall-background-3d-rendering\ \(1\).jpg");
+     background-repeat: no-repeat;
+     width: 1370px;
+     height: 800px;
+     background-size: cover;
+     margin-bottom:200px ;
+}    
+.text-container-3 h4{
+    margin-top: 350px;
+    margin-right: 100px;
+    margin-left: 50px;
+    
+}
+.text-container-3 h1{
+    margin-left: 50px;
+}
+.image-3{
+    height: 300px;
+    width: 340px;
+    margin-left: 50px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+.image-4{
+    height: 300px;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+.pic-name{
+    display:flex;
+    margin-bottom: 100px;
+    margin-top: 0px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    white-space: 200px;
+}
+.footer{
+    background-color: rgb(43, 48, 48);
+    text-align: center;
+    color: white;
+    padding:300px;
+    margin-top: ;
+    width: 1370px;
+    height: 3000;
+    display:inline-block;
+}
