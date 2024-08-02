@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="#">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Exchange</h1>
+        <div class="exchange-box">
+            <div class="exchange-item">
+                <input type="number" id="amount" placeholder="Amount" />
+                <select id="from-currency">
+                    <!-- <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option> -->
+
+                </select>
+            </div>
+            <div class="exchange-icon">⇄</div>
+            <div class="exchange-item">
+                <input type="text" id="result" placeholder="Result" readonly />
+                <select id="to-currency">
+                    <!-- <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option> -->
+                </select>
+            </div>
+            <button class="exchange-button" onclick="convertCurrency()">Convert</button>
+        </div>
+    </div>
+    <script>
+        const API_KEY = 'fa3daa5b1a1c7b5880fe5479'; // Replace with your ExchangeRate-API key
+const API_URL = 'https://api.allorigins.win/raw?url=https://v6.exchangerate-api.com/v6/fa3daa5b1a1c7b5880fe5479/latest/USD';
+;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fromCurrency = document.getElementById('from-currency');
+    const toCurrency = document.getElementById('to-currency');
+
+    fetch(API_URL)
+        .then(response => response.json())
+        .then(data => {
+            const currencies = Object.keys(data.conversion_rates);
+            currencies.forEach(currency => {
+                const optionFrom = document.createElement('option');
+                optionFrom.value = currency;
+                optionFrom.text = currency;
+                fromCurrency.add(optionFrom);
+
+                const optionTo = document.createElement('option');
+                optionTo.value = currency;
+                optionTo.text = currency;
+                toCurrency.add(optionTo);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+});
+
+function convertCurrency() {
+    const amount = document.getElementById('amount').value;
+    const fromCurrency = document.getElementById('from-currency').value;
+    const toCurrency = document.getElementById('to-currency').value;
+    const result = document.getElementById('result');
+
+    fetch('https://api.allorigins.win/raw?url=https://v6.exchangerate-api.com/v6/fa3daa5b1a1c7b5880fe5479/latest/USD'
+    )
+        .then(response => response.json())
+        .then(data => {
+            const rate = data.conversion_rates[toCurrency];
+            result.value = (amount * rate).toFixed(2);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Swap Interface</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="address">0xEB6...370C</span>
+        </div>
+        <div class="swap-box">
+            <div class="swap">
+                <div class="swap-item">
+                    <img src="dai.png" alt="DAI" class="crypto-icon">
+                    <input type="number" id="dai-amount"></input>
+                    <span class="crypto-symbol">DAI</span>
+                </div>
+                <div class="swap-icon">⇄</div>
+                <div class="swap-item">
+                    <img src="eth.png" alt="ETH" class="crypto-icon">
+                    <input type="number" id="eth-amount eth"></input>
+                    <span class="crypto-symbol">ETH</span>
+                </div>
+            </div>
+            <div class="info">
+                <span>Spread across DEXes</span>
+            </div>
+            <button class="swap-button">Swap Now</button>
+        </div>
+    </div>
+    <script>
+         // Example amount of DAI
+const ETH_CONVERSION_URL = 'https://api.coingecko.com/api/v3/simple/price?ids=dai,ethereum&vs_currencies=usd';
+
+document.querySelector('.swap-button').addEventListener('click', ()=>{
+    const daiAmount = parseFloat(document.getElementById('dai-amount').value);
+})
+
+    fetch(ETH_CONVERSION_URL)
+        .then(response => response.json())
+        .then(data => {
+            const daiToUsd = data.dai.usd;
+            const ethToUsd = data.ethereum.usd;
+            const ethAmount = (DAI_AMOUNT * daiToUsd / ethToUsd).toFixed(5);
+            document.querySelector('.crypto-amount.eth').textContent = ethAmount;
+       document.getElementById('eth-amount').value = ethAmount;
+})
+     .catch(error=>{
+        console.log(error);
+     });
+
+    </script>
+</body>
+</html> -->
+<!-- AED
+  AFN
+  AMD9,
+  ANG
+  AOA4,
+  ARS0,
+  AUD
+  AWG
+  AZN
+  BAM
+  BBD
+  BDT3,
+  BGN
+  BHD
+  BIF30,
+  BMD
+  BND
+  BOB
+  BRL
+  BSD
+  BTN,
+  BWP,
+  ALL,
+  BYN
+  BZD
+  CAD
+  CDF00,
+  CHF
+  CLP5,
+  CNY
+  COP32,
+  CRC2,
+  CUP,
+  CVE4,
+  CZK,
+  DJF0,
+  DKK
+  DOP,
+  DZD8,
+  EGP,
+  ERN,
+  ETB,
+  EUR
+  FJD
+  FKP
+  FOK
+  GBP
+  GEL
+  GGP
+  GHS,
+  GIP
+  GMD,
+  GNF15,
+  GTQ
+  GYD4,
+  HKD
+  HNL,
+  HRK
+  HTG1,
+  HUF8,
+  IDR827,
+  ILS
+  IMP
+  INR,
+  IQD93,
+  IRR133,
+  ISK2,
+  JEP
+  JMD5,
+  JOD
+  JPY5,
+  KES8,
+  KGS,
+  KHR64,
+  KID
+  KMF7,
+  KRW34,
+  KWD
+  KYD
+  KZT9,
+  LAK349,
+  LBP000,
+  LKR9,
+  LRD5,
+  LSL,
+  LYD
+  MAD
+  MDL,
+  MGA37,
+  MKD,
+  MMK54,
+  MNT59,
+  MOP
+  MRU,
+  MUR,
+  MVR,
+  MWK60,
+  MXN,
+  MYR
+  MZN,
+  NAD,
+  NGN82,
+  NIO,
+  NOK,
+  NPR8,
+  NZD
+  OMR
+  PAB
+  PEN
+  PGK
+  PHP,
+  PKR5,
+  PLN
+  PYG25,
+  QAR
+  RON
+  RSD4,
+  RUB,
+  RWF31,
+  SAR
+  SBD
+  SCR,
+  SDG6,
+  SEK,
+  SGD
+  SHP
+  SLE,
+  SLL229,
+  SOS8,
+  SRD,
+  SSP59,
+  STN,
+  SYP068,
+  SZL,
+  THB,
+  TJS,
+  TMT
+  TND
+  TOP
+  TRY,
+  TTD
+  TVD
+  TWD,
+  TZS66,
+  UAH,
+  UGX86,
+  UYU,
+  UZS889,
+  VES,
+  VND125,
+  VUV8,
+  WST
+  XAF6,
+  XCD
+  XDR
+  XOF6,
+  XPF2,
+  YER2,
+  ZWL
+  ZWL
+  ZAR
+  ZMW
+
+            
+            
+             -->

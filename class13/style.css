@@ -121,13 +121,18 @@ h4{
      margin-bottom:200px ;
 }    
 .text-container-3 h4{
-    margin-top: 350px;
+    margin-top: 5px;
     margin-right: 100px;
     margin-left: 50px;
     
 }
 .text-container-3 h1{
-    margin-left: 50px;
+    margin-left: 0px;
+}
+.text-container-3{
+    display: flex;
+    margin-top: 400px;
+    margin-right: 100px;
 }
 .image-3{
     height: 300px;
@@ -135,12 +140,14 @@ h4{
     margin-left: 50px;
     border-radius: 20px;
     margin-bottom: 100px;
+  
 }
 .image-4{
     height: 300px;
     margin-left: 20px;
     border-radius: 20px;
     margin-bottom: 100px;
+    
 }
 .pic-name{
     display:flex;
@@ -150,13 +157,15 @@ h4{
     padding-left: 100px;
     white-space: 200px;
 }
+
+}
 .footer{
     background-color: rgb(43, 48, 48);
     text-align: center;
     color: white;
-    padding:300px;
+    padding:200px;
     margin-top: ;
     width: 1370px;
-    height: 3000;
+    height: 50px;
     display:inline-block;
 }

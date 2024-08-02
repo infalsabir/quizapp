@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.exchange-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exchange-item {
+    margin-bottom: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+    width: 200px;
+}
+
+.exchange-icon {
+    font-size: 2em;
+    margin: 10px;
+}
+
+.exchange-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.exchange-button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 600px;
+}
+
+.header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.swap-box {
+    padding: 20px;
+    text-align: center;
+}
+
+.swap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.swap-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crypto-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.crypto-amount {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.crypto-symbol {
+    color: #888;
+}
+
+.swap-icon {
+    font-size: 2em;
+    margin: 0 10px;
+}
+
+.info {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.swap-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.swap-button:hover {
+    background-color: #45a049;
+}
+input{
+    font-size: 1.5em;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 150px;
+} */

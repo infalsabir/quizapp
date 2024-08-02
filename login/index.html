@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <title>Login or Sign Up</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Infal Sabir</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <button class="open-button" onclick="openForm()">Login</button>
+          <div class="form-popup" id="myForm">
+            <form class="form-container">
+              <h1>Login</h1>
+              <label for="name"><b>Name</b></label>
+              <input type="text" placeholder="Enter Name" name="name" required id="name">
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required id="email">
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required id="password">
+              <button type="submit" class="btn" id="btn">Login</button>
+              <button type="button" class="btn cancel"  onclick="closeForm()">Close</button>
+            </form>
+          </div>
+        </li>
+        
+        <li class="nav-item">
+          <button class="open1-button" onclick="openForm1()">Sign Up</button>
+          <div class="form-popup1" id="myForm1">
+            <form class="form-container1">
+              <h1>Sign Up</h1>
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required id="email1">
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required id="password1">
+              <button type="submit" class="btn1" id="btn1">Sign Up</button>
+              <button type="button" class="btn1 cancel" onclick="closeForm1()">Close</button>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
