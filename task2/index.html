@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Plan</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #007bff;
+    }
+
+    .weekly-plan-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .section h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .section ul {
+      list-style: none;
+    }
+
+    .section ul li {
+      font-size: 14px;
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .schedule, .tasks {
+      margin-top: 20px;
+    }
+
+    .schedule h3, .tasks h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .habits {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .habit-day {
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .habit-day.completed {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weekly Plan</h1>
+  <div class="weekly-plan-container">
+    <!-- Focus / Inspiration Section -->
+    <div class="section">
+      <h2>Focus / Inspiration</h2>
+      <ul>
+        <li>Go to bed early every day at 10:15</li>
+        <li>DO THE WORK!</li>
+      </ul>
+    </div>
+
+    <!-- Top Three Tasks Section -->
+    <div class="section">
+      <h2>Top Three Tasks</h2>
+      <ul>
+        <li>Finish food delivery website</li>
+        <li>Go to the gym 5 times</li>
+        <li>Call refrigerator repair</li>
+      </ul>
+    </div>
+
+    <!-- To-Do Section -->
+    <div class="section">
+      <h2>To Do</h2>
+      <ul>
+        <li>Clean house and car</li>
+        <li>Buy groceries</li>
+        <li>Iron my clothes</li>
+        <li>Call family</li>
+        <li>Pay taxes</li>
+        <li>Take my brother from airport</li>
+        <li>Buy a new birthday gift</li>
+        <li>Buy ink and printer</li>
+      </ul>
+    </div>
+
+    <!-- Habits Section -->
+    <div class="section">
+      <h2>Habits</h2>
+      <div class="habits">
+        <div class="habit-day completed">M</div>
+        <div class="habit-day completed">T</div>
+        <div class="habit-day">W</div>
+        <div class="habit-day">T</div>
+        <div class="habit-day">F</div>
+        <div class="habit-day">S</div>
+        <div class="habit-day">S</div>
+      </div>
+    </div>
+
+    <!-- Schedule Section -->
+    <div class="section schedule">
+      <h2>Schedule</h2>
+      <ul>
+        <li>Monday: Work on project, Gym</li>
+        <li>Tuesday: Call refrigerator repair</li>
+        <li>Wednesday: Buy groceries</li>
+        <li>Thursday: Team sync-up</li>
+        <li>Friday: Submit presentation</li>
+      </ul>
+    </div>
+
+    <!-- Reflection Section -->
+    <div class="section">
+      <h2>Reflection</h2>
+      <h3>What went well this week?</h3>
+      <p>First week that I accomplished everything in my weekly planner. It feels great!</p>
+
+      <h3>How can next week be better?</h3>
+      <p>I need to try next week to accomplish everything again. Consistency is KING!</p>
+    </div>
+  </div>
+</body>
+</html>

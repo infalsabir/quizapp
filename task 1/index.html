@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Likes List</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .likes-container {
+      width: 300px;
+      max-height: 400px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    .like-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      padding: 5px;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .like-item:last-child {
+      border-bottom: none;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .profile img {
+      width: 50px;
+      height:50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      object-fit:cover;
+    }
+
+    .profile-name {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .profile-subname {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .button {
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .following {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .requested {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="likes-container">
+    <div class="like-item">
+      <div class="profile">
+        <img src="./RM (1).jpg" alt="Profile Picture">
+        <div>
+          <div class="profile-name">Kim Namjoon</div>
+          <div class="profile-subname">namjoon2735</div>
+        </div>
+      </div>
+      <button class="button following">Following</button>
+    </div>
+
+    <div class="like-item">
+      <div class="profile">
+        <img src="./Jin (1).jpg" alt="Profile Picture">
+        <div>
+          <div class="profile-name">Kim Seokjin</div>
+          <div class="profile-subname">Seokjin12</div>
+        </div>
+      </div>
+      <button class="button following">Following</button>
+    </div>
+
+    <div class="like-item">
+      <div class="profile">
+        <img src="./SUGA PHOTO.jpg" alt="Profile Picture">
+        <div>
+          <div class="profile-name">Min Yoongi</div>
+          <div class="profile-subname">yoongi21</div>
+        </div>
+      </div>
+      <button class="button requested">Requested</button>
+    </div>
+
+    <div class="like-item">
+      <div class="profile">
+        <img src="./J-Hope.jpg" alt="Profile Picture">
+        <div>
+          <div class="profile-name">Jeon Hosek</div>
+          <div class="profile-subname">jhope64</div>
+        </div>
+      </div>
+      <button class="button following">Following</button>
+    </div>
+
+    <div class="like-item">
+      <div class="profile">
+        <img src="./Jimin (1).jpg" alt="Profile Picture">
+        <div>
+          <div class="profile-name">Park Jimin</div>
+          <div class="profile-subname">jimin</div>
+        </div>
+      </div>
+      <button class="button requested">Requested</button>
+    </div>
+
+    <div class="like-item">
+      <div class="profile">
+        <img src="./Taehyung (1).jpg" alt="Profile Picture">
+        <div>
+          <div class="profile-name">Kim Taehyung</div>
+          <div class="profile-subname">tae36</div>
+        </div>
+      </div>
+      <button class="button following">Following</button>
+    </div>
+
+  <div class="like-item">
+    <div class="profile">
+      <img src="./JUNGKOOK 🥵🔥.jpg" alt="Profile Picture">
+      <div>
+        <div class="profile-name">Jeon JUNGKOOK</div>
+        <div class="profile-subname">jk777</div>
+      </div>
+    </div>
+    <button class="button following">Following</button>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
